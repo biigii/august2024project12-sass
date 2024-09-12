@@ -1,0 +1,82 @@
+@use "./variables" as var;
+
+body {
+  // font-family: var(--font-family);
+  font-family: var.$font-family;
+  @media (max-width: 700px) {
+    background-color: #f33;
+  }
+  @media (min-width: 700px) {
+    background-color: #00f;
+  }
+}
+
+// .block {
+//     border: 3px solid
+// }
+
+// .block h2   {
+// background-color: #00f;
+//}
+
+// .block img {
+//     border-&--warninradius: 50%;
+// }
+
+// .block button {
+//     width: 150px;
+//     height: 40px;
+// }
+
+// .block button:hover {
+//     background-color: #f11;
+// }
+
+// with sass can nest selectors
+
+.block {
+  border: 3px solid;
+  //   padding-left: 50px;
+  //   padding-right: 20px;
+  padding: {
+    left: 50px;
+    right: 20px;
+  }
+  h2 {
+    text-align: center;
+  }
+  button {
+    width: 150px;
+    height: 40px;
+    &:hover {
+      background-color: #f22;
+    }
+  }
+  img {
+    border-radius: 50%;
+  }
+}
+
+// sass useful when we want to use BEM
+.block {
+  background-color: #fff;
+  &__heading {
+    color: red;
+  }
+  // block__btn--warning
+  &__btn {
+    font-size: 3em;
+    &--warning {
+      background-color: #ff0;
+    }
+  }
+}
+
+.background {
+  border : {
+    width: 3px;
+    style: solid;
+    color: #f11;
+    radius: 20px;
+  }
+}

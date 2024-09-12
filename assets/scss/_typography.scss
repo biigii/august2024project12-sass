@@ -1,0 +1,26 @@
+@use "./variables" as var;
+/* this will remain because this is a css comment*/
+// this comment will be removed when complied
+// :root {
+//   --brand: #f11;
+//   --font-family: sans-serif
+// }
+
+
+
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  text-transform: capitalize;
+  color: var.$brand;
+  text-decoration: underline;
+  @media (max-width: 700px) {
+    background-color: #f33;
+    color:#000
+  }
+  @media (min-width: 700px) {
+    background-color: #00f;
+    font-size: 10em;
+  }
+}
